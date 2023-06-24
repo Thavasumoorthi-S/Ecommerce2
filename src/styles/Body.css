@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  section {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: burlywood;
+  }
+  .cards {
+    width: 250px;
+    padding:20%;
+    margin-top: 20px;
+  }
+  .image_box img {
+    width: 150px;
+    height: 200px;
+  }
+  
+  
+  .details button {
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+  
+  .details p{
+    color:black;
+    margin:2px;
+    margin-left:10%;
+  }
+  
+  button{
+    background-color: rgb(15, 15, 142);
+    color:white;
+    letter-spacing: 1px;
+    padding: 12px 36px;
+    margin-left:10%;
+    transition: 0.4s ease-in-out;
+    border-radius: 8px;
+  }
+  button:hover{
+    border-radius: 8px;
+   }
+.details p{
+  color:black;
+}

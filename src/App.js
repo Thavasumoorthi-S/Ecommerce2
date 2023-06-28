@@ -25,12 +25,6 @@ const [selectedOption, setSelectedOption] = useState('');
 const [selects, setselects] = useState('');
 
 
-
-const [mobilap,setmobilap]=useState([])
-const [mobidesk,setmobidesk]=useState([])
-const [lapdesk,setlapdesk]=useState([])
-
-
 const [mobitem,setmobitem]=useState(false)
 const [labitem,setlabitem]=useState(false)
 const [deskitem,setdeskitem]=useState(false)
@@ -57,7 +51,7 @@ const datasizechange=(item)=>{
   setsize(item)
 }
 
-var cont;
+let cont;
 const twoitemfilter=useMemo(()=>{
   if(mobileshow===true && ramshow===true)
   {

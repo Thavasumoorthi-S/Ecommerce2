@@ -25,12 +25,6 @@ const [selectedOption, setSelectedOption] = useState('');
 const [selects, setselects] = useState('');
 
 
-const [mobitem,setmobitem]=useState(false)
-const [labitem,setlabitem]=useState(false)
-const [deskitem,setdeskitem]=useState(false)
-const [sizeitem,setsizeitem]=useState(false);
-
-
 const [brand,setbrand]=useState('');
 const [size,setsize]=useState('')
 

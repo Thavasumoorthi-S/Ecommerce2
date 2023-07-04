@@ -46,7 +46,7 @@ const datasizechange=(item)=>{
 }
 
 let cont;
-const twoitemfilter=useMemo(()=>{
+  useMemo(()=>{
   if(mobileshow===true && ramshow===true)
   {
     if(brand!=='' && size!=='')
@@ -193,8 +193,7 @@ const ramclick=()=>{
   setramshow(!ramshow)
 }
 
-
-const datafilter=useMemo(()=>{
+useMemo(()=>{
   if(laptopshow===false&&desktopshow===false &&mobileshow===false )
   {
    const items=list.filter(item=>{

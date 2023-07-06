@@ -194,7 +194,7 @@ const ramclick=()=>{
 }
 
 useMemo(()=>{
-  if(laptopshow===false&&desktopshow===false &&mobileshow===false )
+   if((laptopshow===false&&desktopshow===false &&mobileshow===false)||(laptopshow===true&&desktopshow===true &&mobileshow===true) )
   {
    const items=list.filter(item=>{
       return item
@@ -203,14 +203,6 @@ useMemo(()=>{
     setcheck(1)
   }
   
-  else if(laptopshow===true&&desktopshow===true &&mobileshow===true)
-  {
-   const items=list.filter(item=>{
-      return item
-    })
-    setnewdata(items);
-    setcheck(1)
-  }
   else if(mobileshow===true&&laptopshow===true)
   {
    const items=list.filter(item=>{

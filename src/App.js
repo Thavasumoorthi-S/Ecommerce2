@@ -193,117 +193,86 @@ const ramclick=()=>{
   setramshow(!ramshow)
 }
 
-// useMemo(()=>{
-//    if((laptopshow===false&&desktopshow===false &&mobileshow===false)||(laptopshow===true&&desktopshow===true &&mobileshow===true) )
-//   {
-//    const items=list.filter(item=>{
-//       return item
-//     })
-//     setnewdata(items);
-//     setcheck(1)
-//   }
-  
-//   else if(mobileshow===true&&laptopshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='mobile' || item.type==='laptop';
-//     })
-//     setnewdata(items);
-//     setmobilap(items)
-//     setcheck(1)
-//   }
-//   else if(mobileshow===true&&desktopshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='mobile' ||item.type==='desktop';
-//     })
-//     setnewdata(items);
-//     setmobidesk(items)
-//     setcheck(1)
-//   }
-//   else if(laptopshow===true&&desktopshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='laptop' ||item.type==='desktop';
-//     })
-//     setnewdata(items);
-//     setlapdesk(items)
-//     setcheck(1)
-//   }
-//  else if(mobileshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='mobile';
-//     })
-//     setnewdata(items);
-//     setmobiledata(items)
-//     setcheck(1)
-//   }
-//  else if(laptopshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='laptop';
-//     })
-//     setnewdata(items);
-//     setlaptopdata(items)
-//     setcheck(1)
-//   }
-//   else if(desktopshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item.type==='desktop';
-//     })
-//     setnewdata(items);
-//     setdesktopdata(items)
-//     setcheck(1)
-//   }
-//   else if(ramshow===true)
-//   {
-//    const items=list.filter(item=>{
-//       return item;
-//     })
-//     setnewdata(items);
-//     setcheck(1)
-//   }
-
-
-// },[mobileshow,laptopshow,desktopshow,ramshow])
-
-
-
-  
-useMemo(() => {
-  let items = list;
-
-  if (!laptopshow && !desktopshow && !mobileshow) {
+useMemo(()=>{
+   if((laptopshow===false&&desktopshow===false &&mobileshow===false)||(laptopshow===true&&desktopshow===true &&mobileshow===true) )
+  {
+   const items=list.filter(item=>{
+      return item
+    })
     setnewdata(items);
-    setcheck(1);
-    return;
+    setcheck(1)
   }
-
-  if (laptopshow && desktopshow && mobileshow) {
+  
+  else if(mobileshow===true&&laptopshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='mobile' || item.type==='laptop';
+    })
     setnewdata(items);
-    setcheck(1);
-    return;
+    setmobilap(items)
+    setcheck(1)
+  }
+  else if(mobileshow===true&&desktopshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='mobile' ||item.type==='desktop';
+    })
+    setnewdata(items);
+    setmobidesk(items)
+    setcheck(1)
+  }
+  else if(laptopshow===true&&desktopshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='laptop' ||item.type==='desktop';
+    })
+    setnewdata(items);
+    setlapdesk(items)
+    setcheck(1)
+  }
+ else if(mobileshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='mobile';
+    })
+    setnewdata(items);
+    setmobiledata(items)
+    setcheck(1)
+  }
+ else if(laptopshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='laptop';
+    })
+    setnewdata(items);
+    setlaptopdata(items)
+    setcheck(1)
+  }
+  else if(desktopshow===true)
+  {
+   const items=list.filter(item=>{
+      return item.type==='desktop';
+    })
+    setnewdata(items);
+    setdesktopdata(items)
+    setcheck(1)
+  }
+  else if(ramshow===true)
+  {
+   const items=list.filter(item=>{
+      return item;
+    })
+    setnewdata(items);
+    setcheck(1)
   }
 
-  if (mobileshow && laptopshow) {
-    items = items.filter(item => item.type === 'mobile' || item.type === 'laptop');
-  } else if (mobileshow && desktopshow) {
-    items = items.filter(item => item.type === 'mobile' || item.type === 'desktop');
-  } else if (laptopshow && desktopshow) {
-    items = items.filter(item => item.type === 'laptop' || item.type === 'desktop');
-  } else if (mobileshow) {
-    items = items.filter(item => item.type === 'mobile');
-  } else if (laptopshow) {
-    items = items.filter(item => item.type === 'laptop');
-  } else if (desktopshow) {
-    items = items.filter(item => item.type === 'desktop');
-  }
 
-  setnewdata(items);
-  setcheck(1);
-}, [mobileshow, laptopshow, desktopshow, ramshow]);
+},[mobileshow,laptopshow,desktopshow,ramshow])
+
+
+
+  
+
 
   return (
     <React.StrictMode>
